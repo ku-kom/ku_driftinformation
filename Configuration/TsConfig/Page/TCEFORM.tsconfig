@@ -1,0 +1,35 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    tt_content {
+        subheader {
+           types {
+                ku_driftinformation {
+                    disabled = 1
+                }
+            }
+        }
+        subheader {
+           types {
+                list {
+                    disabled = 1
+                }
+            }
+        }
+        header_link {
+            types {
+                ku_driftinformation {
+                    disabled = 1
+                }
+            }
+        }
+        header_link {
+           types {
+                list {
+                    disabled = 1
+                }
+            }
+        }
+    }
+}

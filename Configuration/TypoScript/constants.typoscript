@@ -1,0 +1,10 @@
+plugin.tx_KuDriftinformation {
+    view {
+        # cat=plugin.tx_KuDriftinformation/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:ku_driftinformation/Resources/Private/Templates/
+        # cat=plugin.tx_KuDriftinformation/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:ku_driftinformation/Resources/Private/Partials/
+        # cat=plugin.tx_KuDriftinformation/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:ku_driftinformation/Resources/Private/Layouts/
+    }
+}

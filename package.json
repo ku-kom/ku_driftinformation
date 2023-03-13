@@ -1,0 +1,38 @@
+{
+    "name": "ku_driftinformation",
+    "version": "1.0.4",
+    "description": "Sitepackage for the project \"UCPH Service information\" ",
+    "main": "Resources/Public/JavaScript/Dist/ku-driftinformation.min.js",
+	"scripts": {
+		"concat:css": "globcat \"Resources/Public/Css/Src/**/*.css\" --output \"Resources/Public/Css/Dist/ku-driftinformation.css\"",
+		"minify:css": "postcss \"Resources/Public/Css/Dist/ku-driftinformation.css\" --config Build/postcss.config.js \"Resources/Public/Css/Dist/*.css\" \"!Resources/Public/Css/Dist/*.min.css\" --output \"Resources/Public/Css/Dist/ku-driftinformation.min.css\"",
+		"concat:js": "globcat \"Resources/Public/JavaScript/Src/**/*.js\" --output \"Resources/Public/JavaScript/Dist/ku-driftinformation.js\"",
+		"lint:js": "eslint --cache --cache-location .cache/.eslintcache",
+		"minify:js": "terser \"Resources/Public/JavaScript/Dist/ku-driftinformation.js\" --output \"Resources/Public/JavaScript/Dist/ku-driftinformation.min.js\" --compress passes=2 --toplevel --mangle-props --source-map \"url='ku-driftinformation.min.js.map'\"",
+		"build:js": "npm-run-all lint:js && npm-run-all concat:js && npm-run-all minify:js",
+		"build:css": "npm-run-all concat:css && npm-run-all minify:css",
+		"watch:js": "onchange \"Resources/Public/JavaScript/Src/*.js\" -- npm-run-all build:js",
+		"watch:css": "onchange \"Resources/Public/Css/Src/*.css\" -- npm-run-all build:css",
+		"watch": "npm-run-all --parallel watch:*"
+	},
+    "keywords": [
+        "TYPO3",
+        "Bootstrap",
+        "PHP",
+        "JavaScript"
+    ],
+    "author": "Nanna Ellegaard",
+    "license": "ISC",
+    "devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"postcss": "^8.4.18",
+		"postcss-cli": "^10.0.0",
+		"cssnano": "^5.1.14",
+		"eslint": "^8.27.0",
+		"globcat": "^2.0.1",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"terser": "^5.15.1",
+		"uglify-js": "^3.17.4"
+	}
+}

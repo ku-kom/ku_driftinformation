@@ -1,0 +1,20 @@
+{
+    "name": "university-of-copenhagen/ku-driftinformation",
+    "type": "typo3-cms-extension",
+    "description": "UCPH service information",
+    "homepage": "https://www.ku.dk/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\KuDriftinformation\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ku_driftinformation"
+        }
+    }
+}
