@@ -12,7 +12,6 @@ use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Http\RequestFactory;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
-use TYPO3\CMS\Core\Localization\LanguageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
@@ -39,50 +38,35 @@ class DriftinfoController extends ActionController
     {
         $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
         $url = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ku_driftinformation', 'uri');
-        $itemsPerPage = (int)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ku_driftinformation', 'numberOfItems') ?? 60;
-
-        $additionalOptions = [
-            'debug' => true,
-            'form_params' => [
-                'json' => '1',
-                'xml' => $itemsPerPage,
-            ]
-        ];
-
+       
         // Return response object
         if (isset($url)) {
             try {
-                $response = $requestFactory->request($url, 'POST', $additionalOptions);
+                $response = $requestFactory->request($url, 'GET');
                 // Get the content on a successful request
+                
                 if ($response->getStatusCode() === 200) {
-                    if (false !== strpos($response->getHeaderLine('Content-Type'), 'application/json')) {
-                        // getContents() returns a string
-                        $string = $response->getBody()->getContents();
-                        // Decode string to json
-                        $data = json_decode((string) $string, true);
+                    // getContents() returns a string
+                    $string = $response->getBody()->getContents();
+  
+                    // Decode string to json
+                    $data = json_decode((string) $string, true);
 
-                        $previous = $data['tidligere'];
-                        $current = $data['aktuelle'];
-                        $planned = $data['planlagte'];
+                    $previous = $data['tidligere'];
+                    $current = $data['aktuelle'];
+                    $planned = $data['planlagte'];
 
-                        if ($previous) {
-                            $this->view->assign('previousinfo', $previous);
-                        }
-                        if ($current) {
-                            $this->view->assign('currentinfo', $current);
-                        }
-                        if ($planned) {
-                            $this->view->assign('plannedinfo', $planned);
-                        }
+                    if ($previous) {
+                        $this->view->assign('previousinfo', $previous);
                     }
-                } else {
-                    // Sisplay error message
-                    $this->addFlashMessage(
-                        $this->getLanguageService()->sL('LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:warningmsg'),
-                        '',
-                        FlashMessage::ERROR,
-                        false
-                    );
+                    if ($current) {
+                        $this->view->assign('currentinfo', $current);
+                    }
+                    if ($planned) {
+                        $this->view->assign('plannedinfo', $planned);
+                    }
+                    $contentObject = $this->configurationManager->getContentObject();
+                    $this->view->assign('data', $contentObject->data);
                 }
             } catch (\Exception $e) {
                 // Display error message
@@ -96,10 +80,5 @@ class DriftinfoController extends ActionController
         }
         
         return $this->htmlResponse();
-    }
-
-    protected function getLanguageService(): LanguageService
-    {
-        return $GLOBALS['LANG'];
     }
 }

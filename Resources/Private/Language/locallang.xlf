@@ -6,8 +6,11 @@
             <authorEmail>nel@adm.ku.dk</authorEmail>
         </header>
         <body>
-        <trans-unit id="warningmsg" resname="warningmsg">
+        <trans-unit id="warningmsg">
             <source>Currently unable to retrieve information. Try again later.</source>
+        </trans-unit>
+        <trans-unit id="previous">
+            <source>See previous service interruptions</source>
         </trans-unit>
         </body>
     </file>

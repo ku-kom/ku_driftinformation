@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<ul class="list-unstyled">
+    <f:for each="{currentinfo.item}" as="item" iteration="iterator">
+        <li>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapse-{item.id}" role="button" aria-expanded="false" aria-controls="collapse-{item.id}">
+                <f:format.html>{item.overskrift.0}</f:format.html>
+            </a>
+            <div class="collapse" id="collapse-{item.id}">
+                <f:format.html>{item.beskrivelse.0}</f:format.html>
+            </div>
+        </li>
+    </f:for>
+</ul>
+
+</html>

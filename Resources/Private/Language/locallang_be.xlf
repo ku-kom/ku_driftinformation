@@ -7,10 +7,7 @@
         </header>
         <body>
         <trans-unit id="webservice_uri">
-            <source>Webservice endpoint without parameters</source>
-        </trans-unit>
-        <trans-unit id="itemsPerPage">
-            <source>Number of items to display</source>
+            <source>Webservice endpoint</source>
         </trans-unit>
         <trans-unit id="title">
             <source>KU Service information</source>
