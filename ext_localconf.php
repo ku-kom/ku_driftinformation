@@ -27,6 +27,6 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 ExtensionUtility::configurePlugin(
   'ku_driftinformation',
   'Pi1',
-  [\UniversityOfCopenhagen\KuDriftinformation\Controller\DriftinfoController::class => 'driftinfoSearch'],
-  [\UniversityOfCopenhagen\KuDriftinformation\Controller\DriftinfoController::class => 'driftinfoSearch']
+  [\UniversityOfCopenhagen\KuDriftinformation\Controller\DriftinfoController::class => 'list'],
+  [\UniversityOfCopenhagen\KuDriftinformation\Controller\DriftinfoController::class => 'list']
 );
