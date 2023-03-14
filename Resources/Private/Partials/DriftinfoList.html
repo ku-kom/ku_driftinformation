@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+</html>
+<f:debug>{_all}</f:debug>
+<f:flashMessages as="flashMessages">
+    <dl class="messages">
+        <f:for each="{flashMessages}" as="flashMessage">
+            <dt>{flashMessage.code}</dt>
+            <dd>{flashMessage.message}</dd>
+        </f:for>
+    </dl>
+</f:flashMessages>
+
+</html>

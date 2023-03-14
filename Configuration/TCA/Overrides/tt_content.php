@@ -21,4 +21,4 @@ call_user_func(function () {
 });
 
 // Remove default plugin fields
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['KuDriftinformation_pi1'] = 'recursive,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['kudriftinformation_pi1'] = 'recursive,pages';

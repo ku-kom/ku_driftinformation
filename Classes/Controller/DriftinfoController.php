@@ -39,7 +39,7 @@ class DriftinfoController extends ActionController
         $url = $domain . $params;
 
         // Return response object
-        if (!empty($url) && !empty($query)) {
+        if (isset($url)) {
             try {
                 $response = $requestFactory->request($url, 'GET');
                 // Get the content on a successful request
@@ -49,19 +49,19 @@ class DriftinfoController extends ActionController
                         $string = $response->getBody()->getContents();
                         // Decode string to json
                         $data = json_decode((string) $string, true);
-                        var_dump($data);
 
                         $previous = $data['tidligere'];
                         $current = $data['aktuelle'];
                         $planned = $data['planlagte'];
+
                         if ($previous) {
-                            $this->view->assign('previous', $previous);
+                            $this->view->assign('previousinfo', $previous);
                         }
                         if ($current) {
-                            $this->view->assign('current', $current);
+                            $this->view->assign('currentinfo', $current);
                         }
                         if ($planned) {
-                            $this->view->assign('planned', $planned);
+                            $this->view->assign('plannedinfo', $planned);
                         }
                     }
                 } else {

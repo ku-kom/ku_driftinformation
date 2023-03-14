@@ -19,24 +19,24 @@ lib.contentElement {
 #### MAKE PLUGIN ACT AS cTYPE ###
 #################################
 tt_content.ku_driftinformation >
-tt_content.ku_driftinformation =< tt_content.list.20.KuDriftinformation_pi1
+tt_content.ku_driftinformation =< tt_content.list.20.kudriftinformation_pi1
 
 #################
 #### PLUGIN #####
 #################
-plugin.tx_KuDriftinformation {
+plugin.tx_kudriftinformation {
     view {
         templateRootPaths {
              0 = EXT:ku_driftinformation/Resources/Private/Templates/
-             1 = {$plugin.tx_KuDriftinformation.view.templateRootPath}
+             1 = {$plugin.tx_Kudriftinformation.view.templateRootPath}
         }
         partialRootPaths {
             0 = EXT:ku_driftinformation/Resources/Private/Partials/
-            1 = {$plugin.tx_KuDriftinformation.view.partialRootPath}
+            1 = {$plugin.tx_Kudriftinformation.view.partialRootPath}
         }
         layoutRootPaths {
             0 = EXT:ku_driftinformation/Resources/Private/Layouts/
-            1 = {$plugin.tx_KuDriftinformation.view.layoutRootPath}
+            1 = {$plugin.tx_Kudriftinformation.view.layoutRootPath}
         }
     }
 }
