@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+/**
+ * Render json from driftinfo.
+ */
+
 namespace UniversityOfCopenhagen\KuDriftinformation\Controller;
 
 use Psr\Http\Message\ResponseInterface;
