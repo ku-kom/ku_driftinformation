@@ -7,6 +7,9 @@ plugin.tx_kudriftinformation {
         # cat=plugin.tx_Kudriftinformation/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:ku_driftinformation/Resources/Private/Layouts/
     }
+}
+
+ku_driftinformation {
     assets {
         # cat=plugin.tx_Kudriftinformation/Assets/; type=string; label=CSS assets: Path to stylesheet.
         extraCss =

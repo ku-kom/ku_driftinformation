@@ -5,11 +5,12 @@ TCEFORM {
     tt_content {
         subheader {
            types {
-                ku_driftinformation {
+                list {
                     disabled = 1
                 }
             }
         }
+        
         subheader {
            types {
                 list {
@@ -17,14 +18,48 @@ TCEFORM {
                 }
             }
         }
+
         header_link {
             types {
-                ku_driftinformation {
+                lit {
                     disabled = 1
                 }
             }
         }
-        header_link {
+
+        header_position {
+           types {
+                list {
+                    disabled = 1
+                }
+            }
+        }
+
+        header_layout {
+           types {
+                list {
+                    disabled = 1
+                }
+            }
+        }
+
+        date {
+           types {
+                list {
+                    disabled = 1
+                }
+            }
+        }
+
+        colPos {
+           types {
+                list {
+                    disabled = 1
+                }
+            }
+        }
+
+        tx_container_parent {
            types {
                 list {
                     disabled = 1
