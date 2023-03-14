@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Render json from driftinfo.
+ * Render json from driftinfo: https://cms.ku.dk/system/driftinfo_xml.mason?xml=10&json=1
  */
 
 namespace UniversityOfCopenhagen\KuDriftinformation\Controller;
@@ -38,22 +38,21 @@ class DriftinfoController extends ActionController
     public function listAction(): ResponseInterface
     {
         $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
-        $domain = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ku_driftinformation', 'uri');
-        $params = '?xml=60&json=1';
-         $url = $domain . $params;
+        $url = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ku_driftinformation', 'uri');
+        $itemsPerPage = (int)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ku_driftinformation', 'numberOfItems') ?? 60;
 
         $additionalOptions = [
-            'headers' => ['Cache-Control' => 'no-cache'],
-            'allow_redirects' => false,
-            'cookies' => false,
-            'http_errors' => false
+            'debug' => true,
+            'form_params' => [
+                'json' => '1',
+                'xml' => $itemsPerPage,
+            ]
         ];
 
         // Return response object
         if (isset($url)) {
             try {
-                $response = $requestFactory->request($url, 'GET', $additionalOptions);
-                \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($response);
+                $response = $requestFactory->request($url, 'POST', $additionalOptions);
                 // Get the content on a successful request
                 if ($response->getStatusCode() === 200) {
                     if (false !== strpos($response->getHeaderLine('Content-Type'), 'application/json')) {

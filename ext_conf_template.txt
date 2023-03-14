@@ -1,2 +1,5 @@
 # cat=Data; type=string; label=LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang_be.xlf:webservice_uri
-uri = https://cms.ku.dk/system/driftinfo_xml.mason
+uri = ttps://cms.ku.dk/system/driftinfo_xml.mason
+
+# cat=Data; type=int+; label=LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang_be.xlf:itemsPerPage
+itemsPerPage = 20
