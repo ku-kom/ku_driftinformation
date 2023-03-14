@@ -40,3 +40,22 @@ plugin.tx_kudriftinformation {
         }
     }
 }
+
+
+##########################
+#### OPTION TO ADD CSS ###
+##########################
+lib.ku_driftinformation.pagecss = TEXT
+lib.ku_driftinformation.pagecss {
+    if.isTrue = {$ku_driftinformation.assets.extraCss}
+    value = {$ku_driftinformation.assets.extraCss}
+}
+
+##########################
+#### OPTION TO ADD JS ####
+##########################
+lib.ku_driftinformation.pagejs = TEXT
+lib.ku_driftinformation.pagejs {
+    if.isTrue = {$ku_driftinformation.assets.extraJs}
+    value = {$ku_driftinformation.assets.extraJs}
+}
