@@ -9,8 +9,17 @@
         <trans-unit id="warningmsg">
             <source>Currently unable to retrieve information. Try again later.</source>
         </trans-unit>
-        <trans-unit id="previous">
+        <trans-unit id="current">
+            <source>Current service interruptions</source>
+        </trans-unit>
+        <trans-unit id="planned">
+            <source>Planned service interruptions</source>
+        </trans-unit>
+        <trans-unit id="seePrevious">
             <source>See previous service interruptions</source>
+        </trans-unit>
+        <trans-unit id="previous">
+            <source>Previous service interruptions</source>
         </trans-unit>
         </body>
     </file>
