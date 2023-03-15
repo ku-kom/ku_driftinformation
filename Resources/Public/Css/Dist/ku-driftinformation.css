@@ -44,3 +44,7 @@
     background-image: var(--bs-accordion-btn-active-icon);
     transform: var(--bs-accordion-btn-icon-transform);
 }
+
+#previous ul {
+    margin-left: 2rem;
+}
