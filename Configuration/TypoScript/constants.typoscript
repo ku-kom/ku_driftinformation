@@ -12,7 +12,7 @@ plugin.tx_kudriftinformation {
 ku_driftinformation {
     assets {
         # cat=plugin.tx_Kudriftinformation/Assets/; type=string; label=CSS assets: Path to stylesheet.
-        extraCss =
+        extraCss = EXT:ku_driftinformation/Resources/Public/Css/Dist/ku-driftinformation.min.css
         # cat=plugin.tx_Kudriftinformation/Assets/; type=string; label=JavaScript assets: Path to javaScript file.
         extraJs = 
     }

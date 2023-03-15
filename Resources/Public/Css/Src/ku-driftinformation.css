@@ -44,7 +44,3 @@
     background-image: var(--bs-accordion-btn-active-icon);
     transform: var(--bs-accordion-btn-icon-transform);
 }
-
-.staff-details>[class^="col"]:nth-child(odd) {
-    font-weight: 600;
-}

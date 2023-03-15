@@ -2,14 +2,14 @@
 <h2>
     <f:translate key="LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:previous" />
 </h2>
-<a class="btn btn-primary" data-bs-toggle="collapse" href="#fold" role="button" aria-expanded="false" aria-controls="fold">
+<a class="btn-ku-driftinfo" data-bs-toggle="collapse" href="#fold" role="button" aria-expanded="false" aria-controls="fold">
     <f:translate key="LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:seePrevious" />
 </a>
 <div class="collapse" id="fold">
     <ul class="list-unstyled">
         <f:for each="{previousinfo.item}" as="item" iteration="iterator">
             <li>
-                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapse-{item.id}" role="button" aria-expanded="false" aria-controls="collapse-{item.id}">
+                <a class="btn-ku-driftinfo" data-bs-toggle="collapse" href="#collapse-{item.id}" role="button" aria-expanded="false" aria-controls="collapse-{item.id}">
                     <f:format.html>{item.overskrift.0}</f:format.html>
                 </a>
                 <div class="collapse" id="collapse-{item.id}">
