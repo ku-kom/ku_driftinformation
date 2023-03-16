@@ -65,6 +65,7 @@ class DriftinfoController extends ActionController
                     if ($planned) {
                         $this->view->assign('plannedinfo', $planned);
                     }
+                    
                     $contentObject = $this->configurationManager->getContentObject();
                     $this->view->assign('data', $contentObject->data);
                 }

@@ -10,7 +10,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'KU Driftinformation',
     'description' => 'UCPH servive information.',
-    'category' => 'templates',
+    'category' => 'fe',
     'constraints' => [
         'depends' => [
         ],
