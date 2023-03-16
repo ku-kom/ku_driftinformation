@@ -1,9 +1,10 @@
-######################################
-#### cType KU Driftinformation ##############
-######################################
-lib.contentElement = FLUIDTEMPLATE
-lib.contentElement {
-    templateName = Default
+#################################
+#### MAKE PLUGIN ACT AS cTYPE ###
+#################################
+tt_content.ku_driftinformation >
+tt_content.ku_driftinformation =< tt_content.list.20.kudriftinformation_pi1
+tt_content.ku_driftinformation {
+   templateName = Default
     templateRootPaths {
         7 = EXT:ku_driftinformation/Resources/Private/Templates/
     }
@@ -12,14 +13,8 @@ lib.contentElement {
     }
     layoutRootPaths {
         7 = EXT:ku_driftinformation/Resources/Private/Layouts/
-    }
+    } 
 }
-
-#################################
-#### MAKE PLUGIN ACT AS cTYPE ###
-#################################
-tt_content.ku_driftinformation >
-tt_content.ku_driftinformation =< tt_content.list.20.kudriftinformation_pi1
 
 #################
 #### PLUGIN #####
