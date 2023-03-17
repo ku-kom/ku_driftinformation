@@ -14,6 +14,7 @@ use TYPO3\CMS\Core\Http\RequestFactory;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Frontend\Exception;
 
 class DriftinfoController extends ActionController
 {
@@ -41,8 +42,7 @@ class DriftinfoController extends ActionController
 
         // Check if the url is valid
         if (false === filter_var($url, FILTER_VALIDATE_URL)) {
-            $message = sprintf('Feed URL is not valid "%s". Update extension settings.', $url);
-            throw new \RuntimeException($message, 1320651278);
+            throw new \ErrorException('No valid feed URL is set', 1595545177);
         }
        
         // Return response object
