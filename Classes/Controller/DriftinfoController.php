@@ -56,7 +56,6 @@ class DriftinfoController extends ActionController
                     if (false !== strpos($response->getHeaderLine('Content-Type'), 'application/json')) {
                         // getContents() returns a string
                         $string = $response->getBody()->getContents();
-  
                         // Decode string to json
                         $data = json_decode((string) $string, true);
 
