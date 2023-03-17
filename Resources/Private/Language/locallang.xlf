@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2022-08-23UTC07:12:050">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-03-14T10:27:00Z" product-name="Service_information">
         <header>
             <authorName>Nanna Ellegaard</authorName>
             <authorEmail>nel@adm.ku.dk</authorEmail>
         </header>
         <body>
-        <trans-unit id="warningmsg">
+        <trans-unit id="warningmsg" xml:space="preserve">
             <source>Currently unable to retrieve information. Try again later.</source>
         </trans-unit>
-        <trans-unit id="current">
+        <trans-unit id="current" xml:space="preserve">
             <source>Current service interruptions</source>
         </trans-unit>
-        <trans-unit id="planned">
+        <trans-unit id="planned" xml:space="preserve">
             <source>Planned service interruptions</source>
         </trans-unit>
-        <trans-unit id="seePrevious">
+        <trans-unit id="seePrevious" xml:space="preserve">
             <source>See previous service interruptions</source>
         </trans-unit>
-        <trans-unit id="previous">
+        <trans-unit id="previous" xml:space="preserve">
             <source>Previous service interruptions</source>
         </trans-unit>
-        <trans-unit id="starttime">
+        <trans-unit id="starttime" xml:space="preserve">
             <source>Start time</source>
         </trans-unit>
-        <trans-unit id="system">
+        <trans-unit id="system" xml:space="preserve">
             <source>System</source>
         </trans-unit>
-        <trans-unit id="heading">
+        <trans-unit id="heading" xml:space="preserve">
             <source>Heading</source>
         </trans-unit>
-        <trans-unit id="description">
+        <trans-unit id="description" xml:space="preserve">
             <source>Description</source>
         </trans-unit>
         </body>
