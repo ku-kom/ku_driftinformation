@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<dl class="row">
+    <f:if condition="{item.starttid.0} !== ''">
+        <dt class="col-sm-2">
+            <f:translate key="LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:starttime" />
+        </dt>
+        <dd class="col-sm-10">{item.starttid.0}</dd>
+    </f:if>
+    <f:if condition="{item.system.0} !== ''">
+        <dt class="col-sm-2">
+            <f:translate key="LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:system" />
+        </dt>
+        <dd class="col-sm-10">{item.system.0}</dd>
+    </f:if>
+    <f:if condition="{item.overskrift.0} !== ''">
+        <dt class="col-sm-2">
+            <f:translate key="LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:heading" />
+        </dt>
+        <dd class="col-sm-10">{item.overskrift.0}</dd>
+    </f:if>
+    <f:if condition="{item.beskrivelse.0} !== ''">
+        <dt class="col-sm-2">
+            <f:translate key="LLL:EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf:description" />
+        </dt>
+        <dd class="col-sm-10">
+            <f:format.html>{item.beskrivelse.0}</f:format.html>
+        </dd>
+    </f:if>
+</dl>
+
+</html>

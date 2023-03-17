@@ -21,6 +21,18 @@
         <trans-unit id="previous">
             <source>Previous service interruptions</source>
         </trans-unit>
+        <trans-unit id="starttime">
+            <source>Start time</source>
+        </trans-unit>
+        <trans-unit id="system">
+            <source>System</source>
+        </trans-unit>
+        <trans-unit id="heading">
+            <source>Heading</source>
+        </trans-unit>
+        <trans-unit id="description">
+            <source>Description</source>
+        </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div class="tx-ku-driftinformation">
-    <f:render partial="DriftinfoList" arguments="{_all}" />
+    <f:render partial="List" arguments="{_all}" />
 </div>
 <f:if condition="{lib.ku_driftinformation.pagecss !== ''}">
     <f:asset.css identifier="kudriftinformation_css" href="{f:cObject(typoscriptObjectPath: 'lib.ku_driftinformation.pagecss')}" />
