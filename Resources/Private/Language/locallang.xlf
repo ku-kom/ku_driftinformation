@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2023-03-14T10:27:00Z" product-name="Service_information">
+    <file source-language="en" datatype="plaintext" original="EXT:ku_driftinformation/Resources/Private/Language/locallang.xlf" date="2023-03-14T10:27:00Z" product-name="ku_driftinformation">
         <header>
             <authorName>Nanna Ellegaard</authorName>
             <authorEmail>nel@adm.ku.dk</authorEmail>
