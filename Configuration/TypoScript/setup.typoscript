@@ -44,6 +44,7 @@ lib.ku_driftinformation.pagecss = TEXT
 lib.ku_driftinformation.pagecss {
     if.isTrue = {$ku_driftinformation.assets.extraCss}
     value = {$ku_driftinformation.assets.extraCss}
+    htmlSanitize = 1
 }
 
 ##########################
@@ -53,4 +54,5 @@ lib.ku_driftinformation.pagejs = TEXT
 lib.ku_driftinformation.pagejs {
     if.isTrue = {$ku_driftinformation.assets.extraJs}
     value = {$ku_driftinformation.assets.extraJs}
+    htmlSanitize = 1
 }
